@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/Components/Navbar/navbar";
 
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
-  display: "swap"
+  display: "swap",
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${sora.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
