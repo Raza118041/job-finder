@@ -1,12 +1,10 @@
 "use client"
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import React, { useState } from 'react'
 import { Button } from '../ui/button'
 import { FaBars, FaCaretDown, FaCaretUp, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-    const NoSSRComponent = dynamic(() => import('./navbar'), { ssr: false })
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] =  useState<number | null>(null)
 
